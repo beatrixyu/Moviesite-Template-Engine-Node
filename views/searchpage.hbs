@@ -1,0 +1,25 @@
+<form action="/searchByTitle" method="POST">
+    <div class="form-group col-md-4">
+        <label for="inputTitle">Search By Title</label>
+        <input type="text" class="form-control" name="title">
+    </div>
+    <div class="form-group col-md-4">
+        <label>Search By Year</label>
+        <input type="text" class="form-control" name="year">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{#if data}}
+<div class="container">
+    <div class="card col-6">
+        <img src="{{data.Poster}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Title of The Movie: {{data.Title}}</h5>
+            <h5>Movie Released: {{data.Year}}</h5>
+        </div>
+    </div>
+</div>
+{{else}}
+<h4>Please search a movie by title</h4>
+{{/if}}

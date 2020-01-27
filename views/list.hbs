@@ -1,0 +1,14 @@
+{{data.totalResults}}
+{{#each data.Search}}
+<div class="card-group float-left col-4">
+    {{#isNotEqual Poster "N/A"}}
+    <div class="card col-6">
+        <img src="{{Poster}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Title of The Movie: {{Title}}</h5>
+            <h5>Movie Released: {{Year}}</h5>
+        </div>
+    </div>
+    {{/isNotEqual}}
+</div>
+{{/each}}
